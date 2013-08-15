@@ -1,0 +1,461 @@
+<Module>
+<ModulePrefs title="__MSG_s.g.name__" directory_title="__MSG_s.g.name__" description="__MSG_s.g.description__" scrolling="true" height="300" author="ALM Works" author_email="support@almworks.com" thumbnail="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/2.4.0/_/download/resources/com.almworks.jira.structure:structure-gadget/structure-gadget-thumb120x60.png">
+<Optional feature="gadget-directory">
+<Param name="categories">JIRA</Param>
+</Optional>
+<Require feature="setprefs"/>
+<Require feature="settitle"/>
+<Require feature="minimessage"/>
+<Require feature="dynamic-height"/>
+<Require feature="views"/>
+<Require feature="oauthpopup"/>
+<Optional feature="atlassian.util"/>
+<OAuth>
+<Service>
+<Access url="https://cards.linaro.org/plugins/servlet/oauth/access-token" method="POST"/>
+<Request url="https://cards.linaro.org/plugins/servlet/oauth/request-token" method="POST"/>
+<Authorization url="https://cards.linaro.org/plugins/servlet/oauth/authorize?oauth_callback=http%3A%2F%2Foauth.gmodules.com%2Fgadgets%2Foauthcallback"/>
+</Service>
+</OAuth>
+<Locale>
+<messagebundle>
+<msg name="gadget.common.invalid.period">Invalid period ''{0}'' specified</msg>
+<msg name="gadget.common.cumulative.description">
+Progressively add totals (1.. 2.. 3), or show individual values (1.. 1.. 1).
+</msg>
+<msg name="gadget.common.advanced.search">Advanced Search</msg>
+<msg name="gadget.common.issuesresolved">Issues Resolved</msg>
+<msg name="gadget.common.oauth.approve.button">Login approve</msg>
+<msg name="gadget.common.categories.all">All Categories</msg>
+<msg name="gadget.common.days.description">Days (including today) to show in the graph.</msg>
+<msg name="gadget.common.cumulative.label">Cumulative Totals:</msg>
+<msg name="gadget.common.required.query">No project or filter specified.</msg>
+<msg name="gadget.common.projects.description">The projects to display information for.</msg>
+<msg name="gadget.common.columns.to.display.label">Columns to display</msg>
+<msg name="gadget.common.stattype.label">Statistic Type:</msg>
+<msg name="gadget.common.period.daily">Daily</msg>
+<msg name="gadget.common.container.oauth.required">Authentication required to use this gadget</msg>
+<msg name="gadget.common.projects.and.categories.description">
+Projects or categories to use as the basis for the graph.
+</msg>
+<msg name="gadget.common.quick.find">Quick Find</msg>
+<msg name="gadget.common.period.hourly">Hourly</msg>
+<msg name="gadget.common.invalid.stat.type">Invalid Statistics Type ({0})</msg>
+<msg name="gadget.common.invalid.jql">Invalid JQL.</msg>
+<msg name="gadget.common.manage.filters">Manage Filters</msg>
+<msg name="gadget.common.invalid.project">Invalid project</msg>
+<msg name="gadget.common.invalid.filter.id">Invalid filter</msg>
+<msg name="gadget.common.filter.description">Saved filter to use for the query.</msg>
+<msg name="gadget.common.period.yearly">Yearly</msg>
+<msg name="gadget.common.period.name.label">Period:</msg>
+<msg name="gadget.common.show.column.headers.description">Helps to distinguish between similar fields</msg>
+<msg name="gadget.common.invalid.filter">Invalid project or filter</msg>
+<msg name="gadget.common.show.column.headers.label">Show column headers</msg>
+<msg name="gadget.common.oauth.approve.message">
+If you are a registered user, there may be more information available to you. You will need to log in and approve this gadget''s access to your account. (<a class='ag-show-requests' href="#">Show Restricted URLs</a>)
+</msg>
+<msg name="gadget.common.error.500">
+An internal server error occurred when requesting resource <a href="{0}" target="_parent">{1}</a>.
+</msg>
+<msg name="gadget.common.negative.days">Days must be greater or equal to zero.</msg>
+<msg name="gadget.common.days.overlimit">Days must not exceed {0}</msg>
+<msg name="gadget.common.show.column.headers.true.label">Yes</msg>
+<msg name="gadget.common.filter.label">Saved Filter:</msg>
+<msg name="gadget.common.num.description">Number of results to display (maximum of 50).</msg>
+<msg name="gadget.common.default.columns">Default Columns</msg>
+<msg name="gadget.common.project.edit">Click here to select/change project.</msg>
+<msg name="gadget.common.unknown.legacy.portlet">Unknown Legacy Portlet</msg>
+<msg name="gadget.common.period.name.description">The length of periods represented on the graph.</msg>
+<msg name="gadget.common.config.unavailable">
+There are problems with the current configuration for this gadget. The errors below may have been caused by the deletion of entities required by the gadget or by changes to your permissions.
+</msg>
+<msg name="gadget.common.indexing.configure">Please {0}configure indexing{1}.</msg>
+<msg name="gadget.common.unknown.legacy.portlet.description">
+Legacy portlet with key ''{0}'' could not be loaded
+</msg>
+<msg name="gadget.common.projects.and.categories.label">Projects and Categories:</msg>
+<msg name="gadget.common.cancel">Cancel</msg>
+<msg name="gadget.common.configure">Edit</msg>
+<msg name="gadget.common.projects.label">Projects:</msg>
+<msg name="gadget.common.projects.all">All Projects</msg>
+<msg name="gadget.common.days.nan">Days must be a number</msg>
+<msg name="gadget.common.num.high">Number must be less than or equal to 50</msg>
+<msg name="gadget.common.error.save.dashboard">Error rendering save to dashboard form.</msg>
+<msg name="gadget.common.no">No</msg>
+<msg name="gadget.common.chart.period">Period: last {0}{1}{2} days (grouped {3}{4}{5})</msg>
+<msg name="gadget.common.save">Save</msg>
+<msg name="gadget.common.period.monthly">Monthly</msg>
+<msg name="gadget.common.issues">Issues</msg>
+<msg name="gadget.common.filter">Filter:</msg>
+<msg name="gadget.common.refresh.never">Never</msg>
+<msg name="gadget.common.projects.and.categories.mixed">You can not mix categories and projects.</msg>
+<msg name="gadget.common.num.overlimit">Number must not exceed {0}</msg>
+<msg name="gadget.common.num.negative">Number must be greater than 0</msg>
+<msg name="gadget.common.period.quarterly">Quarterly</msg>
+<msg name="gadget.common.add.filter">Add filter</msg>
+<msg name="gadget.common.categories">Categories</msg>
+<msg name="gadget.common.authrequired">
+Please login <strong>OR</strong> contact Administrator to <a href='http://confluence.atlassian.com/display/DOC/External+Gadgets'>configure Application Link</a>
+</msg>
+<msg name="gadget.common.required.project.or.filter">Please select a filter or project</msg>
+<msg name="gadget.common.issuesunresolved">Issues Unresolved</msg>
+<msg name="gadget.common.period.name">Period</msg>
+<msg name="gadget.common.show.column.headers.false.label">No</msg>
+<msg name="gadget.common.period.weekly">Weekly</msg>
+<msg name="gadget.common.filterid.edit">Click here to select/change filter or project.</msg>
+<msg name="gadget.common.all.projects.and.others">
+''All Projects'' can not be selected along with other projects
+</msg>
+<msg name="gadget.common.indexing">
+Indexing is currently not configured so no issue searching can be performed.
+</msg>
+<msg name="gadget.common.projects">Projects</msg>
+<msg name="gadget.common.columns.to.display.description">Default columns:</msg>
+<msg name="gadget.common.filterid.none.selected">No Filter/Project selected</msg>
+<msg name="gadget.common.refresh.description">How often you would like this gadget to update</msg>
+<msg name="gadget.common.filters">Filters</msg>
+<msg name="gadget.common.filterid.description">
+Project or saved filter to use as the basis for the graph.
+</msg>
+<msg name="gadget.common.days.overlimit.for.period">Days must not exceed {0} for {1} period</msg>
+<msg name="gadget.common.error.404">
+The resource <a href="{0}" target="parent">{1}</a>, cannot be found.
+</msg>
+<msg name="gadget.common.refresh.minutes">Every {0} Minutes</msg>
+<msg name="gadget.common.error.generation">
+Unfortunately, one or more of your preferences are now unavailable. Please update your preferences, or remove gadget by clicking delete from the title bar above.
+</msg>
+<msg name="gadget.common.all.categories.and.others">
+''All Categories'' can not be selected along with other categories
+</msg>
+<msg name="gadget.common.num.label">Number of Results:</msg>
+<msg name="gadget.common.anonymous.is.invalid">This gadget requires a logged in user.</msg>
+<msg name="gadget.common.project.none.selected">No project selected</msg>
+<msg name="gadget.common.indexing.admin">
+Please contact your administrator to get indexing configured.
+</msg>
+<msg name="gadget.common.project.description">Project to use as the basis for the graph.</msg>
+<msg name="gadget.common.days.label">Days Previously:</msg>
+<msg name="gadget.common.no.filter.id">You must specify a filter.</msg>
+<msg name="gadget.common.refresh.hours">Every {0} Hours</msg>
+<msg name="gadget.common.num.nan">
+The value must be an integer greater than 0 and less than or equal to 50
+</msg>
+<msg name="gadget.common.projects.and.categories.none.selected">No project/category selected</msg>
+<msg name="gadget.common.anonymous.filter">Anonymous Filter</msg>
+<msg name="gadget.common.project.label">Project:</msg>
+<msg name="gadget.common.invalid.projectOrFilterId">Invalid project or filter</msg>
+<msg name="gadget.common.invalid.projectOrFilterId.query.prefix">Your query can not start with ''*'' or ''?''</msg>
+<msg name="gadget.common.refresh.label">Refresh Interval:</msg>
+<msg name="gadget.common.stattype.description">
+Select which type of statistic to display for this filter.
+</msg>
+<msg name="gadget.common.filterid.label">Project or Saved Filter:</msg>
+<msg name="gadget.common.refresh.hour">Every {0} Hour</msg>
+<msg name="gadget.common.invalid.filter.validationfailed">The selected filter {0} has an error: {1}.</msg>
+<msg name="gadget.common.yes">Yes</msg>
+<msg name="gadget.common.reload">Refresh</msg>
+<msg name="gadget.common.filter.none.selected">No Filter selected</msg>
+<msg name="gadget.common.invalid.projectCategory">Invalid Project Category</msg>
+<msg name="s.g.config.err.bad.structureId">No such structure: {0}</msg>
+<msg name="s.g.config.structureId.favorites.label">Favorite Structures</msg>
+<msg name="s.g.config.viewActions.make-public">Let everyone use this view</msg>
+<msg name="s.generic.loading">Loading...</msg>
+<msg name="s.g.config.viewActions.copy.save">Create View</msg>
+<msg name="s.g.config.viewId.label">View<span class="aui-icon icon-required"></span></msg>
+<msg name="s.generic.cancel">Cancel</msg>
+<msg name="s.g.config.allowChanges.description">Allow changes (subject to permissions)</msg>
+<msg name="s.generic.invisible.structure.name">(structure not visible)</msg>
+<msg name="s.generic.all">All</msg>
+<msg name="s.g.gadget-unavailable">Sorry, Structure gadget is not available.</msg>
+<msg name="s.g.config.filterId.label">Filter</msg>
+<msg name="s.g.config.viewId.search.n-more">{0,number,integer} more views found</msg>
+<msg name="s.g.empty-structure-hint.html.nocreate">
+The structure is empty. You can use Structure Board to search and add existing issues.
+</msg>
+<msg name="s.g.structure-unavailable">Sorry, Structure plugin is not available.</msg>
+<msg name="s.g.footer.view.adjusted">View has been adjusted.</msg>
+<msg name="s.g.config.err.bad.numRows">Please enter a value from {0} to {1}.</msg>
+<msg name="s.g.empty-structure-hint.html.create">
+The structure is empty. You can <a href="#" data-s-action="createSiblingBelow">create a new issue</a> or use Structure Board to search and add existing issues.
+</msg>
+<msg name="s.g.config.viewId.suggestions.footer">Start typing for views</msg>
+<msg name="s.generic.anonymous.fullname">Anonymous User</msg>
+<msg name="s.g.no-structure-selected">Please select a structure to display.</msg>
+<msg name="s.g.title">Structure: {0}</msg>
+<msg name="s.g.config.structureId.recents.label">Recent Structures</msg>
+<msg name="s.g.config.viewActions.copy.name">View Name</msg>
+<msg name="s.g.config.numRows.label">Visible Rows</msg>
+<msg name="s.generic.apply">Apply</msg>
+<msg name="s.g.config.viewActions.copy.title">
+Create a new view based on the current view configuration
+</msg>
+<msg name="s.g.config.viewActions.not-public">
+This view is not public. If a user looking at this gadget does not have access to this view, a default view is used instead.
+</msg>
+<msg name="s.global-structure.description">Initial general-purpose structure.</msg>
+<msg name="s.g.config.err.bad.filterId">No such filter: {0}</msg>
+<msg name="s.g.config.structureId.suggestions.footer">Start typing for structures</msg>
+<msg name="s.g.config.numRows.description">Maximum number of visible rows (up to 50).</msg>
+<msg name="s.g.config.structureId.search.label">Structures found:</msg>
+<msg name="s.g.name">Structure</msg>
+<msg name="s.generic.lastListItemOr">, or</msg>
+<msg name="s.generic.anonymous.username">anonymous</msg>
+<msg name="s.g.no-such-structure">
+Sorry, structure with ID {0} does not exist or you don''t have permissions to view it.
+</msg>
+<msg name="s.generic.operation-failed">Operation Failed</msg>
+<msg name="s.g.config.viewActions.copy.cancel">Cancel</msg>
+<msg name="s.g.config.err.no.viewId">Please pick a view.</msg>
+<msg name="s.g.config.err.bad.viewId">No such view: {0}</msg>
+<msg name="s.g.config.structureId.search.n-more">{0,number,integer} more structures found</msg>
+<msg name="s.g.description">
+Displays issue structure and lets you edit the hierarchy and the issues.
+</msg>
+<msg name="s.g.config.viewActions.copy.default-name">View for Gadget #{0}</msg>
+<msg name="s.g.config.filterId.clear">clear</msg>
+<msg name="s.generic.none">None</msg>
+<msg name="s.g.config.err.no.structureId">Please pick a structure.</msg>
+<msg name="s.generic.or">or</msg>
+<msg name="s.g.config.viewActions.copy">New View...</msg>
+<msg name="s.global-structure.name">Global Structure</msg>
+<msg name="s.g.config.structureId.label">
+Structure<span class="aui-icon icon-required"></span>
+</msg>
+</messagebundle>
+</Locale>
+<Locale lang="en" country="US">
+<messagebundle>
+<msg name="gadget.common.invalid.period">Invalid period ''{0}'' specified</msg>
+<msg name="gadget.common.cumulative.description">
+Progressively add totals (1.. 2.. 3), or show individual values (1.. 1.. 1).
+</msg>
+<msg name="gadget.common.advanced.search">Advanced Search</msg>
+<msg name="gadget.common.issuesresolved">Issues Resolved</msg>
+<msg name="gadget.common.oauth.approve.button">Login approve</msg>
+<msg name="gadget.common.categories.all">All Categories</msg>
+<msg name="gadget.common.days.description">Days (including today) to show in the graph.</msg>
+<msg name="gadget.common.cumulative.label">Cumulative Totals:</msg>
+<msg name="gadget.common.required.query">No project or filter specified.</msg>
+<msg name="gadget.common.projects.description">The projects to display information for.</msg>
+<msg name="gadget.common.columns.to.display.label">Columns to display</msg>
+<msg name="gadget.common.stattype.label">Statistic Type:</msg>
+<msg name="gadget.common.period.daily">Daily</msg>
+<msg name="gadget.common.container.oauth.required">Authentication required to use this gadget</msg>
+<msg name="gadget.common.projects.and.categories.description">
+Projects or categories to use as the basis for the graph.
+</msg>
+<msg name="gadget.common.quick.find">Quick Find</msg>
+<msg name="gadget.common.period.hourly">Hourly</msg>
+<msg name="gadget.common.invalid.stat.type">Invalid Statistics Type ({0})</msg>
+<msg name="gadget.common.invalid.jql">Invalid JQL.</msg>
+<msg name="gadget.common.manage.filters">Manage Filters</msg>
+<msg name="gadget.common.invalid.project">Invalid project</msg>
+<msg name="gadget.common.invalid.filter.id">Invalid filter</msg>
+<msg name="gadget.common.filter.description">Saved filter to use for the query.</msg>
+<msg name="gadget.common.period.yearly">Yearly</msg>
+<msg name="gadget.common.period.name.label">Period:</msg>
+<msg name="gadget.common.show.column.headers.description">Helps to distinguish between similar fields</msg>
+<msg name="gadget.common.invalid.filter">Invalid project or filter</msg>
+<msg name="gadget.common.show.column.headers.label">Show column headers</msg>
+<msg name="gadget.common.container.login">You must be logged in to view this gadget.</msg>
+<msg name="gadget.common.oauth.approve.message">
+If you are a registered user, there may be more information available to you. You will need to log in and approve this gadget''s access to your account.
+</msg>
+<msg name="gadget.common.error.500">
+An internal server error occurred when requesting resource <a href="{0}" target="_parent">{1}</a>.
+</msg>
+<msg name="gadget.common.negative.days">Days must be greater or equal to zero.</msg>
+<msg name="gadget.common.days.overlimit">Days must not exceed {0}</msg>
+<msg name="gadget.common.show.column.headers.true.label">Yes</msg>
+<msg name="gadget.common.filter.label">Saved Filter:</msg>
+<msg name="gadget.common.num.description">Number of results to display (maximum of 50).</msg>
+<msg name="gadget.common.default.columns">Default Columns</msg>
+<msg name="gadget.common.project.edit">Click here to select/change project.</msg>
+<msg name="gadget.common.unknown.legacy.portlet">Unknown Legacy Portlet</msg>
+<msg name="gadget.common.period.name.description">The length of periods represented on the graph.</msg>
+<msg name="gadget.common.config.unavailable">
+There are problems with the current configuration for this gadget. The errors below may have been caused by the deletion of entities required by the gadget or by changes to your permissions.
+</msg>
+<msg name="gadget.common.indexing.configure">Please {0}configure indexing{1}.</msg>
+<msg name="gadget.common.unknown.legacy.portlet.description">
+Legacy portlet with key ''{0}'' could not be loaded
+</msg>
+<msg name="gadget.common.projects.and.categories.label">Projects and Categories:</msg>
+<msg name="gadget.common.cancel">Cancel</msg>
+<msg name="gadget.common.configure">Edit</msg>
+<msg name="gadget.common.projects.label">Projects:</msg>
+<msg name="gadget.common.projects.all">All Projects</msg>
+<msg name="gadget.common.days.nan">Days must be a number</msg>
+<msg name="gadget.common.num.high">Number must be less than or equal to 50</msg>
+<msg name="gadget.common.error.save.dashboard">Error rendering save to dashboard form.</msg>
+<msg name="gadget.common.no">No</msg>
+<msg name="gadget.common.chart.period">Period: last {0}{1}{2} days (grouped {3}{4}{5})</msg>
+<msg name="gadget.common.save">Save</msg>
+<msg name="gadget.common.period.monthly">Monthly</msg>
+<msg name="gadget.common.issues">Issues</msg>
+<msg name="gadget.common.filter">Filter:</msg>
+<msg name="gadget.common.refresh.never">Never</msg>
+<msg name="gadget.common.projects.and.categories.mixed">You can not mix categories and projects.</msg>
+<msg name="gadget.common.num.overlimit">Number must not exceed {0}</msg>
+<msg name="gadget.common.num.negative">Number must be greater than 0</msg>
+<msg name="gadget.common.period.quarterly">Quarterly</msg>
+<msg name="gadget.common.add.filter">Add filter</msg>
+<msg name="gadget.common.categories">Categories</msg>
+<msg name="gadget.common.authrequired">
+Please login <strong>OR</strong> contact Administrator to <a href='http://confluence.atlassian.com/display/DOC/External+Gadgets'>configure Application Link</a>
+</msg>
+<msg name="gadget.common.required.project.or.filter">Please select a filter or project</msg>
+<msg name="gadget.common.issuesunresolved">Issues Unresolved</msg>
+<msg name="gadget.common.period.name">Period</msg>
+<msg name="gadget.common.show.column.headers.false.label">No</msg>
+<msg name="gadget.common.period.weekly">Weekly</msg>
+<msg name="gadget.common.filterid.edit">Click here to select/change filter or project.</msg>
+<msg name="gadget.common.all.projects.and.others">
+''All Projects'' can not be selected along with other projects
+</msg>
+<msg name="gadget.common.indexing">
+Indexing is currently not configured so no issue searching can be performed.
+</msg>
+<msg name="gadget.common.projects">Projects</msg>
+<msg name="gadget.common.columns.to.display.description">Default columns:</msg>
+<msg name="gadget.common.filterid.none.selected">No Filter/Project selected</msg>
+<msg name="gadget.common.refresh.description">How often you would like this gadget to update</msg>
+<msg name="gadget.common.filters">Filters</msg>
+<msg name="gadget.common.filterid.description">
+Project or saved filter to use as the basis for the graph.
+</msg>
+<msg name="gadget.common.days.overlimit.for.period">Days must not exceed {0} for {1} period</msg>
+<msg name="gadget.common.error.404">
+The resource <a href="{0}" target="parent">{1}</a>, cannot be found.
+</msg>
+<msg name="gadget.common.refresh.minutes">Every {0} Minutes</msg>
+<msg name="gadget.common.error.generation">
+Unfortunately, one or more of your preferences are now unavailable. Please update your preferences, or remove gadget by clicking delete from the title bar above.
+</msg>
+<msg name="gadget.common.all.categories.and.others">
+''All Categories'' can not be selected along with other categories
+</msg>
+<msg name="gadget.common.num.label">Number of Results:</msg>
+<msg name="gadget.common.anonymous.is.invalid">This gadget requires a logged in user.</msg>
+<msg name="gadget.common.project.none.selected">No project selected</msg>
+<msg name="gadget.common.indexing.admin">
+Please contact your administrator to get indexing configured.
+</msg>
+<msg name="gadget.common.project.description">Project to use as the basis for the graph.</msg>
+<msg name="gadget.common.days.label">Days Previously:</msg>
+<msg name="gadget.common.no.filter.id">You must specify a filter.</msg>
+<msg name="gadget.common.refresh.hours">Every {0} Hours</msg>
+<msg name="gadget.common.num.nan">
+The value must be an integer greater than 0 and less than or equal to 50
+</msg>
+<msg name="gadget.common.projects.and.categories.none.selected">No project/category selected</msg>
+<msg name="gadget.common.anonymous.filter">Anonymous Filter</msg>
+<msg name="gadget.common.project.label">Project:</msg>
+<msg name="gadget.common.invalid.projectOrFilterId">Invalid project or filter</msg>
+<msg name="gadget.common.invalid.projectOrFilterId.query.prefix">Your query can not start with ''*'' or ''?''</msg>
+<msg name="gadget.common.refresh.label">Refresh Interval:</msg>
+<msg name="gadget.common.stattype.description">
+Select which type of statistic to display for this filter.
+</msg>
+<msg name="gadget.common.filterid.label">Project or Saved Filter:</msg>
+<msg name="gadget.common.refresh.hour">Every {0} Hour</msg>
+<msg name="gadget.common.invalid.filter.validationfailed">The selected filter {0} has an error: {1}.</msg>
+<msg name="gadget.common.yes">Yes</msg>
+<msg name="gadget.common.reload">Refresh</msg>
+<msg name="gadget.common.filter.none.selected">No Filter selected</msg>
+<msg name="gadget.common.invalid.projectCategory">Invalid Project Category</msg>
+<msg name="s.g.config.err.bad.structureId">No such structure: {0}</msg>
+<msg name="s.g.config.structureId.favorites.label">Favorite Structures</msg>
+<msg name="s.g.config.viewActions.make-public">Let everyone use this view</msg>
+<msg name="s.generic.loading">Loading...</msg>
+<msg name="s.g.config.viewActions.copy.save">Create View</msg>
+<msg name="s.g.config.viewId.label">View<span class="aui-icon icon-required"></span></msg>
+<msg name="s.generic.cancel">Cancel</msg>
+<msg name="s.g.config.allowChanges.description">Allow changes (subject to permissions)</msg>
+<msg name="s.generic.invisible.structure.name">(structure not visible)</msg>
+<msg name="s.generic.all">All</msg>
+<msg name="s.g.gadget-unavailable">Sorry, Structure gadget is not available.</msg>
+<msg name="s.g.config.filterId.label">Filter</msg>
+<msg name="s.g.config.viewId.search.n-more">{0,number,integer} more views found</msg>
+<msg name="s.g.empty-structure-hint.html.nocreate">
+The structure is empty. You can use Structure Board to search and add existing issues.
+</msg>
+<msg name="s.g.structure-unavailable">Sorry, Structure plugin is not available.</msg>
+<msg name="s.g.footer.view.adjusted">View has been adjusted.</msg>
+<msg name="s.g.config.err.bad.numRows">Please enter a value from {0} to {1}.</msg>
+<msg name="s.g.empty-structure-hint.html.create">
+The structure is empty. You can <a href="#" data-s-action="createSiblingBelow">create a new issue</a> or use Structure Board to search and add existing issues.
+</msg>
+<msg name="s.g.config.viewId.suggestions.footer">Start typing for views</msg>
+<msg name="s.generic.anonymous.fullname">Anonymous User</msg>
+<msg name="s.g.no-structure-selected">Please select a structure to display.</msg>
+<msg name="s.g.title">Structure: {0}</msg>
+<msg name="s.g.config.structureId.recents.label">Recent Structures</msg>
+<msg name="s.g.config.viewActions.copy.name">View Name</msg>
+<msg name="s.g.config.numRows.label">Visible Rows</msg>
+<msg name="s.generic.apply">Apply</msg>
+<msg name="s.g.config.viewActions.copy.title">
+Create a new view based on the current view configuration
+</msg>
+<msg name="s.g.config.viewActions.not-public">
+This view is not public. If a user looking at this gadget does not have access to this view, a default view is used instead.
+</msg>
+<msg name="s.global-structure.description">Initial general-purpose structure.</msg>
+<msg name="s.g.config.err.bad.filterId">No such filter: {0}</msg>
+<msg name="s.g.config.structureId.suggestions.footer">Start typing for structures</msg>
+<msg name="s.g.config.numRows.description">Maximum number of visible rows (up to 50).</msg>
+<msg name="s.g.config.structureId.search.label">Structures found:</msg>
+<msg name="s.g.name">Structure</msg>
+<msg name="s.generic.lastListItemOr">, or</msg>
+<msg name="s.generic.anonymous.username">anonymous</msg>
+<msg name="s.g.no-such-structure">
+Sorry, structure with ID {0} does not exist or you don''t have permissions to view it.
+</msg>
+<msg name="s.generic.operation-failed">Operation Failed</msg>
+<msg name="s.g.config.viewActions.copy.cancel">Cancel</msg>
+<msg name="s.g.config.err.no.viewId">Please pick a view.</msg>
+<msg name="s.g.config.err.bad.viewId">No such view: {0}</msg>
+<msg name="s.g.config.structureId.search.n-more">{0,number,integer} more structures found</msg>
+<msg name="s.g.description">
+Displays issue structure and lets you edit the hierarchy and the issues.
+</msg>
+<msg name="s.g.config.viewActions.copy.default-name">View for Gadget #{0}</msg>
+<msg name="s.g.config.filterId.clear">clear</msg>
+<msg name="s.generic.none">None</msg>
+<msg name="s.g.config.err.no.structureId">Please pick a structure.</msg>
+<msg name="s.generic.or">or</msg>
+<msg name="s.g.config.viewActions.copy">New View...</msg>
+<msg name="s.global-structure.name">Global Structure</msg>
+<msg name="s.g.config.structureId.label">
+Structure<span class="aui-icon icon-required"></span>
+</msg>
+</messagebundle>
+</Locale>
+</ModulePrefs>
+<UserPref name="structureId" default_value="132" datatype="hidden"/>
+<UserPref name="viewId" default_value="10" datatype="hidden"/>
+<UserPref name="filterId" default_value="" datatype="hidden"/>
+<UserPref name="numRows" default_value="10" datatype="hidden"/>
+<UserPref name="isConfigured" default_value="true" datatype="hidden"/>
+<UserPref name="allowChanges" default_value="false" datatype="hidden"/>
+<Content type="html">
+<![CDATA[
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+ 
+ <link type="text/css" rel="stylesheet" href="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/5.0.1/_/download/batch/com.atlassian.auiplugin:ajs-gadgets-base/com.atlassian.auiplugin:ajs-gadgets-b
+]]>
+<![CDATA[
+ase.css" media="all"> <!--[if lte IE 8]> <link type="text/css" rel="stylesheet" href="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/5.0.1/_/download/batch/com.atlassian.auiplugin:ajs-gadgets-base/com.atlassian.auiplugin:ajs-gadgets-base.css?conditionalComment=lte+IE+8" media="all"> <![en
+]]>
+<![CDATA[
+dif]--> <link type="text/css" rel="stylesheet" href="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/5.0.1/_/download/batch/com.atlassian.auiplugin:ajs-html5shim/com.atlassian.auiplugin:ajs-html5shim.css" media="all"> <link type="text/css" rel="stylesheet" href="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/5.0.1/_/download/batch/com.atlassian.auiplugin:ajs/com.atlassian.auiplugin:ajs.css" media="all"> <!--[if lte IE 8]> <link type="text/css" rel="stylesheet" href="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/5.0.1/_/download/batch/com.atlassian.auiplugin:ajs/com.atlassian.auiplugin:ajs.css?conditionalComment=lte+IE+8" media="all"> <![endif]--> <!--[if lte IE 9]> <link type="text/css" rel="stylesheet" href="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/5.0.1/_/download/batch/com.atlassian.auiplugin:ajs/com.atlassian.auiplugin:ajs.css?conditionalComment=lte+IE+9" media="all"> <![endif]--> <link type="text/css" rel="stylesheet" href="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/1.0/_/download/batch/jira.webresources:icons/jira.webresources:icons.css" media="all"> <link type="text/css" rel="stylesheet" href="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/1.0/_/download/batch/jira.webresources:list-styles/jira.webresources:list-styles.css" media="all"> <link type="text/css" rel="stylesheet" href="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/1.0/_/download/batch/jira.webresources:inline-layer/jira.webresources:inline-layer.css" media="all"> <link type="text/css" rel="stylesheet" href="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/1.0/_/download/batch/jira.webresources:dropdown/jira.webresources:dropdown.css" media="all"> <link type="text/css" rel="stylesheet" href="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/1.0/_/download/batch/jira.webresources:issue-table/jira.webresources:issue-table.css" media="all"> <link type="text/css" rel="stylesheet" href="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/1.0/_/download/batch/jira.webresources:select-pickers/jira.webresources:select-pickers.css" media="all"> <link type="text/css" rel="stylesheet" href="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/1.0/_/download/batch/jira.webresources:page-loading-indicator/jira.webresources:page-loading-indicator.css" media="all"> <link type="text/css" rel="stylesheet" href="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/1.0/_/download/batch/jira.webresources:shifter/jira.webresources:shifter.css" media="all"> <link type="text/css" rel="stylesheet" href="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/1.0/_/download/batch/jira.webresources:dialogs/jira.webresources:dialogs.css" media="all"> <link type="text/css" rel="stylesheet" href="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/1.0/_/download/batch/jira.webresources:jira-global/jira.webresources:jira-global.css" media="all"> <link type="text/css" rel="stylesheet" href="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/5.0.1/_/download/batch/com.atlassian.auiplugin:aui-experimental-buttons/com.atlassian.auiplugin:aui-experimental-buttons.css" media="all"> <link type="text/css" rel="stylesheet" href="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/5.0.1/_/download/batch/com.atlassian.auiplugin:aui-experimental-dropdown2/com.atlassian.auiplugin:aui-experimental-dropdown2.css" media="all"> <link type="text/css" rel="stylesheet" href="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/5.0.1/_/download/batch/com.atlassian.auiplugin:aui-experimental-toolbar2/com.atlassian.auiplugin:aui-experimental-toolbar2.css" media="all"> <!--[if lte IE 8]> <link type="text/css" rel="stylesheet" href="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/5.0.1/_/download/batch/com.atlassian.auiplugin:aui-experimental-toolbar2/com.atlassian.auiplugin:aui-experimental-toolbar2.css?conditionalComment=lte+IE+8" media="all"> <![endif]--> <link type="text/css" rel="stylesheet" href="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/5.0.1/_/download/batch/com.atlassian.auiplugin:aui-experimental-badge/com.atlassian.auiplugin:aui-experimental-badge.css" media="all"> <!--[if lte IE 9]> <link type="text/css" rel="stylesheet" href="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/5.0.1/_/download/batch/com.atlassian.auiplugin:aui-experimental-badge/com.atlassian.auiplugin:aui-experimental-badge.css?conditionalComment=lte+IE+9" media="all"> <![endif]--> <link type="text/css" rel="stylesheet" href="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/5.0.1/_/download/batch/com.atlassian.auiplugin:aui-experimental-lozenge/com.atlassian.auiplugin:aui-experimental-lozenge.css" media="all"> <link type="text/css" rel="stylesheet" href="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/5.0.1/_/download/batch/com.atlassian.auiplugin:aui-experimental-labels/com.atlassian.auiplugin:aui-experimental-labels.css" media="all"> <link type="text/css" rel="stylesheet" href="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/5.0.1/_/download/batch/com.atlassian.auiplugin:aui-experimental-avatars/com.atlassian.auiplugin:aui-experimental-avatars.css" media="all"> <link type="text/css" rel="stylesheet" href="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/5.0.1/_/download/batch/com.atlassian.auiplugin:aui-experimental-page-header/com.atlassian.auiplugin:aui-experimental-page-header.css" media="all"> <link type="text/css" rel="stylesheet" href="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/1.0/_/download/batch/jira.webresources:global-static/jira.webresources:global-static.css" media="all"> <link type="text/css" rel="stylesheet" href="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/1.0/_/download/batch/jira.webresources:autocomplete/jira.webresources:autocomplete.css" media="all"> <link type="text/css" rel="stylesheet" href="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/3.2.0-m26/_/download/batch/com.atlassian.gadgets.publisher:ajax/com.atlassian.gadgets.publisher:ajax.css" media="all"> <link type="text/css" rel="stylesheet" href="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/3.2.0-m26/_/download/batch/com.atlassian.gadgets.publisher:ajs-gadgets/com.atlassian.gadgets.publisher:ajs-gadgets.css" media="all"> <link type="text/css" rel="stylesheet" href="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/3.2.0-m26/_/download/batch/com.atlassian.gadgets.publisher:ajs-gadgets-lite/com.atlassian.gadgets.publisher:ajs-gadgets-lite.css" media="all"> <link type="text/css" rel="stylesheet" href="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/6.0.2/_/download/batch/com.atlassian.jira.gadgets:core-gadget-resources/com.atlassian.jira.gadgets:core-gadget-resources.css" media="all"> <link type="text/css" rel="stylesheet" href="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/1.0/_/download/batch/jira.webresources:jquery-fancybox/jira.webresources:jquery-fancybox.css" media="all"> <link type="text/css" rel="stylesheet" href="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/2.4.0/_/download/batch/com.almworks.jira.structure:jquery-ui/com.almworks.jira.structure:jquery-ui.css" media="all"> <link type="text/css" rel="stylesheet" href="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/2.4.0/_/download/batch/com.almworks.jira.structure:widget-bare/com.almworks.jira.structure:widget-bare.css" media="all"> <link type="text/css" rel="stylesheet" href="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/2.4.0/_/download/batch/com.almworks.jira.structure:gadget-bare/com.almworks.jira.structure:gadget-bare.css" media="all"> <script type="text/javascript" src="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/5.0.1/_/download/batch/com.atlassian.auiplugin:jquery-lib/com.atlassian.auiplugin:jquery-lib.js" ></script> <script type="text/javascript" src="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/5.0.1/_/download/batch/com.atlassian.auiplugin:jquery-compatibility/com.atlassian.auiplugin:jquery-compatibility.js" ></script> <script type="text/javascript" src="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/5.0.1/_/download/batch/com.atlassian.auiplugin:aui-core/com.atlassian.auiplugin:aui-core.js" ></script> <script type="text/javascript" src="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/5.0.1/_/download/batch/com.atlassian.auiplugin:ajs-gadgets-base/com.atlassian.auiplugin:ajs-gadgets-base.js" ></script> <script type="text/javascript" src="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/5.0.1/_/download/batch/com.atlassian.auiplugin:ajs-contextpath/com.atlassian.auiplugin:ajs-contextpath.js" ></script> <!--[if lte IE 8]> <script type="text/javascript" src="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/5.0.1/_/download/batch/com.atlassian.auiplugin:ajs-html5shim/com.atlassian.auiplugin:ajs-html5shim.js?conditionalComment=lte+IE+8" ></script> <![endif]--> <script type="text/javascript" src="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/5.0.1/_/download/batch/com.atlassian.auiplugin:ajs/com.atlassian.auiplugin:ajs.js" ></script> <!--[if lte IE 8]> <script type="text/javascript" src="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/5.0.1/_/download/batch/com.atlassian.auiplugin:ajs/com.atlassian.auiplugin:ajs.js?conditionalComment=lte+IE+8" ></script> <![endif]--> <script type="text/javascript" src="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/1.0/_/download/batch/jira.webresources:util-lite/jira.webresources:util-lite.js" ></script> <script type="text/javascript" src="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/1.0/_/download/batch/jira.webresources:browser-properties/jira.webresources:browser-properties.js" ></script> <script type="text/javascript" src="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/5.0.1/_/download/batch/com.atlassian.auiplugin:ajs-underscorejs/com.atlassian.auiplugin:ajs-underscorejs.js" ></script> <script type="text/javascript" src="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/5.0.1/_/download/batch/com.atlassian.auiplugin:ajs-backbone/com.atlassian.auiplugin:ajs-backbone.js" ></script> <script type="text/javascript" src="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/2.1.0/_/download/batch/com.atlassian.soy.soy-template-plugin:soy-deps/com.atlassian.soy.soy-template-plugin:soy-deps.js" ></script> <script type="text/javascript" src="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/1.0/_/download/batch/jira.webresources:util/jira.webresources:util.js" ></script> <script type="text/javascript" src="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/1.0/_/download/batch/jira.webresources:content-retrievers/jira.webresources:content-retrievers.js" ></script> <script type="text/javascript" src="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/1.0/_/download/batch/jira.webresources:inline-layer/jira.webresources:inline-layer.js" ></script> <script type="text/javascript" src="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/1.0/_/download/batch/jira.webresources:list/jira.webresources:list.js" ></script> <script type="text/javascript" src="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/1.0/_/download/batch/jira.webresources:dropdown/jira.webresources:dropdown.js" ></script> <script type="text/javascript" src="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/1.0/_/download/batch/jira.webresources:issue-table/jira.webresources:issue-table.js" ></script> <script type="text/javascript" src="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/1.0/_/download/batch/jira.webresources:dropdown-select/jira.webresources:dropdown-select.js" ></script> <script type="text/javascript" src="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/1.0/_/download/batch/jira.webresources:select-pickers/jira.webresources:select-pickers.js" ></script> <script type="text/javascript" src="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/5.0.1/_/download/batch/com.atlassian.auiplugin:aui-experimental-soy-templates/com.atlassian.auiplugin:aui-experimental-soy-templates.js" ></script> <script type="text/javascript" src="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/1.0/_/download/batch/jira.webresources:js-soy-templates/jira.webresources:js-soy-templates.js" ></script> <script type="text/javascript" src="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/1.0/_/download/batch/jira.webresources:page-loading-indicator/jira.webresources:page-loading-indicator.js" ></script> <script type="text/javascript" src="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/1.0/_/download/batch/jira.webresources:shifter/jira.webresources:shifter.js" ></script> <script type="text/javascript" src="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/1.0/_/download/batch/jira.webresources:dialogs/jira.webresources:dialogs.js" ></script> <script type="text/javascript" src="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/1.0/_/download/batch/jira.webresources:user-management/jira.webresources:user-management.js" ></script> <script type="text/javascript" src="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/1.0/_/download/batch/jira.webresources:general-configuration/jira.webresources:general-configuration.js" ></script> <script type="text/javascript" src="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/1.0/_/download/batch/jira.webresources:data-sets/jira.webresources:data-sets.js" ></script> <script type="text/javascript" src="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/1.0/_/download/batch/jira.webresources:mentions/jira.webresources:mentions.js" ></script> <script type="text/javascript" src="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/1.0/_/download/batch/jira.webresources:jira-global/jira.webresources:jira-global.js" ></script> <script type="text/javascript" src="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/5.0.1/_/download/batch/com.atlassian.auiplugin:aui-experimental-dropdown2/com.atlassian.auiplugin:aui-experimental-dropdown2.js" ></script> <script type="text/javascript" src="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/1.0/_/download/batch/jira.webresources:calendar/jira.webresources:calendar.js" ></script> <script type="text/javascript" src="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/1.0/_/download/batch/jira.webresources:autocomplete/jira.webresources:autocomplete.js" ></script> <script type="text/javascript" src="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/1.0/_/download/batch/jira.webresources:group-pickers/jira.webresources:group-pickers.js" ></script> <script type="text/javascript" src="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/1.0/_/download/batch/jira.webresources:user-pickers/jira.webresources:user-pickers.js" ></script> <script type="text/javascript" src="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/1.0/_/download/batch/jira.webresources:ie-imitation-placeholder/jira.webresources:ie-imitation-placeholder.js" ></script> <script type="text/javascript" src="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/1.0/_/download/batch/jira.webresources:jira-fields/jira.webresources:jira-fields.js" ></script> <script type="text/javascript" src="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/1.0/_/download/batch/jira.webresources:set-focus/jira.webresources:set-focus.js" ></script> <script type="text/javascript" src="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/3.2.0-m26/_/download/batch/com.atlassian.gadgets.publisher:templates/com.atlassian.gadgets.publisher:templates.js" ></script> <script type="text/javascript" src="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/3.2.0-m26/_/download/batch/com.atlassian.gadgets.publisher:util/com.atlassian.gadgets.publisher:util.js" ></script> <script type="text/javascript" src="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/3.2.0-m26/_/download/batch/com.atlassian.gadgets.publisher:ajax/com.atlassian.gadgets.publisher:ajax.js" ></script> <script type="text/javascript" src="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/3.2.0-m26/_/download/batch/com.atlassian.gadgets.publisher:ajs-gadgets/com.atlassian.gadgets.publisher:ajs-gadgets.js" ></script> <script type="text/javascript" src="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/3.2.0-m26/_/download/batch/com.atlassian.gadgets.publisher:ajs-gadgets-lite/com.atlassian.gadgets.publisher:ajs-gadgets-lite.js" ></script> <script type="text/javascript" src="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/6.0.2/_/download/batch/com.atlassian.jira.gadgets:core-gadget-resources/com.atlassian.jira.gadgets:core-gadget-resources.js" ></script> <script type="text/javascript" src="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/1.0/_/download/batch/jira.webresources:jquery-easing/jira.webresources:jquery-easing.js" ></script> <script type="text/javascript" src="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/1.0/_/download/batch/jira.webresources:jquery-fancybox/jira.webresources:jquery-fancybox.js" ></script> <script type="text/javascript" src="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/1.0/_/download/batch/jira.webresources:jqlautocomplete/jira.webresources:jqlautocomplete.js" ></script> <script type="text/javascript" src="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/1.0/_/download/batch/jira.webresources:key-commands/jira.webresources:key-commands.js" ></script> <script type="text/javascript" src="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/2.4.0/_/download/batch/com.almworks.jira.structure:jquery/com.almworks.jira.structure:jquery.js" ></script> <script type="text/javascript" src="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/2.4.0/_/download/batch/com.almworks.jira.structure:jquery-ui/com.almworks.jira.structure:jquery-ui.js" ></script> <script type="text/javascript" src="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/2.4.0/_/download/batch/com.almworks.jira.structure:json/com.almworks.jira.structure:json.js" ></script> <script type="text/javascript" src="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/2.4.0/_/download/batch/com.almworks.jira.structure:jsutil/com.almworks.jira.structure:jsutil.js" ></script> <script type="text/javascript" src="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/2.4.0/_/download/batch/com.almworks.jira.structure:widget-i18n/com.almworks.jira.structure:widget-i18n.js" ></script> <script type="text/javascript" src="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/2.4.0/_/download/batch/com.almworks.jira.structure:widget-bare/com.almworks.jira.structure:widget-bare.js" ></script> <script type="text/javascript" src="https://cards.linaro.org/s/en_US-q9q11i-1988229788/6097/7/2.4.0/_/download/batch/com.almworks.jira.structure:gadget-bare/com.almworks.jira.structure:gadget-bare.js" ></script> 
+ <script type="text/javascript">
+ (function() {
+ var G = namespace('almworks.structure.gadget');
+ G.initialize('https://cards.linaro.org');
+ })();
+ </script>
+]]>
+</Content>
+</Module>
