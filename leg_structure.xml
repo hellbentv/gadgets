@@ -436,7 +436,7 @@ Structure<span class="aui-icon icon-required"></span>
 <UserPref name="structureId" default_value="105" datatype="hidden"/>
 <UserPref name="viewId" default_value="10" datatype="hidden"/>
 <UserPref name="filterId" default_value="" datatype="hidden"/>
-<UserPref name="numRows" default_value="10" datatype="hidden"/>
+<UserPref name="numRows" default_value="11" datatype="hidden"/>
 <UserPref name="isConfigured" default_value="true" datatype="hidden"/>
 <UserPref name="allowChanges" default_value="false" datatype="hidden"/>
 <Content type="html">
