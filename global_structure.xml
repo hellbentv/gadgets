@@ -433,7 +433,7 @@ Structure<span class="aui-icon icon-required"></span>
 </messagebundle>
 </Locale>
 </ModulePrefs>
-<UserPref name="structureId" default_value="132" datatype="hidden"/>
+<UserPref name="structureId" default_value="135" datatype="hidden"/>
 <UserPref name="viewId" default_value="10" datatype="hidden"/>
 <UserPref name="filterId" default_value="" datatype="hidden"/>
 <UserPref name="numRows" default_value="10" datatype="hidden"/>
