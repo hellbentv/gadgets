@@ -186,7 +186,7 @@ Whether to show totals for each of the columns and rows.
 <msg name="gadget.twodimensionalfilterstats.show.totals.true.label">Yes</msg>
 <msg name="gadget.twodimensionalfilterstats.sort.direction.label">Sort Direction</msg>
 <msg name="gadget.twodimensionalfilterstats.xstattype.label">XAxis</msg>
-<msg name="gadget.twodimensionalfilterstats.sort.direction.description">&nbsp;</msg>
+<msg name="gadget.twodimensionalfilterstats.sort.direction.description"></msg>
 </messagebundle>
 </Locale>
 <Locale lang="en" country="UK">
@@ -358,7 +358,7 @@ Whether to show totals for each of the columns and rows.
 <msg name="gadget.twodimensionalfilterstats.show.totals.true.label">Yes</msg>
 <msg name="gadget.twodimensionalfilterstats.sort.direction.label">Sort Direction</msg>
 <msg name="gadget.twodimensionalfilterstats.xstattype.label">XAxis</msg>
-<msg name="gadget.twodimensionalfilterstats.sort.direction.description">&nbsp;</msg>
+<msg name="gadget.twodimensionalfilterstats.sort.direction.description"></msg>
 </messagebundle>
 </Locale>
 <Locale lang="en" country="US">
@@ -531,7 +531,7 @@ Whether to show totals for each of the columns and rows.
 <msg name="gadget.twodimensionalfilterstats.show.totals.true.label">Yes</msg>
 <msg name="gadget.twodimensionalfilterstats.sort.direction.label">Sort Direction</msg>
 <msg name="gadget.twodimensionalfilterstats.xstattype.label">XAxis</msg>
-<msg name="gadget.twodimensionalfilterstats.sort.direction.description">&nbsp;</msg>
+<msg name="gadget.twodimensionalfilterstats.sort.direction.description"></msg>
 </messagebundle>
 </Locale>
 <Locale lang="fr" country="FR">
@@ -600,7 +600,7 @@ Impossible de charger le portlet hérité avec la clé ''{0}''
 <msg name="gadget.common.projects.and.categories.label">Projets et catégories :</msg>
 <msg name="gadget.common.cancel">Annuler</msg>
 <msg name="gadget.common.configure">Modifier</msg>
-<msg name="gadget.common.projects.label">Projets&nbsp;:</msg>
+<msg name="gadget.common.projects.label">Projets:</msg>
 <msg name="gadget.common.projects.all">Tous les projets</msg>
 <msg name="gadget.common.days.nan">Les jours doivent être un nombre</msg>
 <msg name="gadget.common.num.high">Le nombre doit être inférieur ou égal à 50</msg>
@@ -726,7 +726,7 @@ Trier par total de ligne ou par ordre de champ naturel.
 <msg name="gadget.twodimensionalfilterstats.show.totals.true.label">Oui</msg>
 <msg name="gadget.twodimensionalfilterstats.sort.direction.label">Trier la direction</msg>
 <msg name="gadget.twodimensionalfilterstats.xstattype.label">AxeX</msg>
-<msg name="gadget.twodimensionalfilterstats.sort.direction.description">&nbsp;</msg>
+<msg name="gadget.twodimensionalfilterstats.sort.direction.description"></msg>
 </messagebundle>
 </Locale>
 <Locale lang="de" country="DE">
@@ -933,7 +933,7 @@ Sortieren Sie nach Anzahl der Zeilen oder nach natürlicher Feldreihenfolge.
 <msg name="gadget.twodimensionalfilterstats.show.totals.true.label">Ja</msg>
 <msg name="gadget.twodimensionalfilterstats.sort.direction.label">Sortierrichtung</msg>
 <msg name="gadget.twodimensionalfilterstats.xstattype.label">x-Achse</msg>
-<msg name="gadget.twodimensionalfilterstats.sort.direction.description">&nbsp;</msg>
+<msg name="gadget.twodimensionalfilterstats.sort.direction.description"></msg>
 </messagebundle>
 </Locale>
 <Locale lang="ja" country="JP">
@@ -1260,7 +1260,7 @@ Ordena por total de fila o por orden natural de campo.
 <msg name="gadget.twodimensionalfilterstats.show.totals.true.label">Sí</msg>
 <msg name="gadget.twodimensionalfilterstats.sort.direction.label">Dirección del orden</msg>
 <msg name="gadget.twodimensionalfilterstats.xstattype.label">EjeX</msg>
-<msg name="gadget.twodimensionalfilterstats.sort.direction.description">&nbsp;</msg>
+<msg name="gadget.twodimensionalfilterstats.sort.direction.description"></msg>
 </messagebundle>
 </Locale>
 </ModulePrefs>
