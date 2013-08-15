@@ -358,7 +358,7 @@ Whether to show totals for each of the columns and rows.
 <msg name="gadget.twodimensionalfilterstats.show.totals.true.label">Yes</msg>
 <msg name="gadget.twodimensionalfilterstats.sort.direction.label">Sort Direction</msg>
 <msg name="gadget.twodimensionalfilterstats.xstattype.label">XAxis</msg>
-<msg name="gadget.twodimensionalfilterstats.sort.direction.description"<</msg>
+<msg name="gadget.twodimensionalfilterstats.sort.direction.description"></msg></msg>
 </messagebundle>
 </Locale>
 <Locale lang="en" country="US">
